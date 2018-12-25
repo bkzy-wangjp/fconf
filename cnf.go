@@ -259,7 +259,7 @@ func GetCfg(filepath, tag string) (string, error) {
 func WriteTagValueToFile(filepath, tag, content string) error {
 	dat, err := ioutil.ReadFile(filepath) //读取文件
 	if err != nil {
-		dat = append(dat, "[MicETL]\n"...)
+		dat = append(dat, "[MicETL]\r"...)
 	}
 	cfg := string(dat) //将读取到达配置文件转化为字符串
 	var str, tag_str string
